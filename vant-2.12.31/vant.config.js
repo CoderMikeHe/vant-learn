@@ -368,6 +368,10 @@ module.exports = {
                 path: 'tree-select',
                 title: 'TreeSelect 分类选择',
               },
+              {
+                path: 'tree-select-x',
+                title: 'TreeSelectX 分类选择',
+              },
             ],
           },
           {
@@ -753,6 +757,10 @@ module.exports = {
               {
                 path: 'tree-select',
                 title: 'TreeSelect',
+              },
+              {
+                path: 'tree-select-x',
+                title: 'TreeSelectX',
               },
             ],
           },

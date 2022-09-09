@@ -1,6 +1,7 @@
 // Utils
 import { createNamespace, addUnit } from '../utils';
 import { emit, inherit } from '../utils/functional';
+import { scrollTopTo } from '../tabs/utils';
 
 // Components
 import Icon from '../icon';
@@ -133,6 +134,7 @@ function TreeSelect(
   return (
     <div class={bem()} style={{ height: addUnit(height) }} {...inherit(ctx)}>
       <Sidebar
+        ref="navScroller"
         class={bem('nav')}
         activeKey={mainActiveIndex}
         onChange={(index: number) => {
@@ -144,7 +146,7 @@ function TreeSelect(
       >
         {Navs}
       </Sidebar>
-      <div class={bem('content')}>{Content()}</div>
+      <div ref="scroller" class={bem('content')}>{Content()}</div>
     </div>
   );
 }
